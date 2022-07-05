@@ -1,5 +1,4 @@
-for i in range(1, 301):
-
+def processNumber(i):
     buzzes = []
     if i % 3 == 0:
         buzzes.append("Fizz")
@@ -16,6 +15,9 @@ for i in range(1, 301):
         buzzes.reverse()
 
     if len(buzzes) > 0:
-        print("".join(buzzes))
+        return "".join(buzzes)
     else:
-        print(i)
+        return i
+
+for i in range(1, 301):
+    print(processNumber(i))
